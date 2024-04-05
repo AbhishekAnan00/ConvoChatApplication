@@ -30,9 +30,9 @@ MongooseCon()
     app.use("/api/message", message);
     
     //middleware for deployement
-    app.use(express.static(path.join(__dirname,"/Fronted/dist")))
+    app.use(express.static(path.join(__dirname,"/fronted/dist")))
     app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "Fronted", "dist", "index.html"));
+      res.sendFile(path.join(__dirname, "fronted", "dist", "index.html"));
     });
 
     // Start server
