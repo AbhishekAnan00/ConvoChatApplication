@@ -8,7 +8,7 @@ const protector = async (req, res, next) => {
     if (!token) {
       return res
         .status(401)
-        .json({ error: "Unauthorized - No Token Provided" });
+        .json({error: "Unauthorized - No Token Provided"});
     }
 
     let decoded; //verify token
